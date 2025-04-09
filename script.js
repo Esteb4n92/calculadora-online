@@ -33,7 +33,7 @@ const insertFunction = (funcName, suffix = ')') => {
   if (value && !isNaN(value[value.length - 1])) {
     display.value = `${funcName}(${value}${suffix}`;
     try {
-      const result = eval(display.value + ')');
+      const result = eval(display.value);
       display.value = `${result}`;
     } catch {
       display.value = 'Error';
